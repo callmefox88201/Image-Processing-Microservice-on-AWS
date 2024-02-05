@@ -2,7 +2,7 @@
 
 
 ***
-## Getting Start
+## Getting Startsh -o
 
 ### GET /filteredimage?image_url={{URL}}
 
