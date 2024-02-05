@@ -1,29 +1,39 @@
 # Image Processing Microservice on AWS
 
-
 ***
+
 ## Getting Startsh -o
 
 ### GET /filteredimage?image_url={{URL}}
 
 An example with 200 response:
+
 ```
-http://projectstartercode-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https%3A%2F%2Fgenk.mediacdn.vn%2F2019%2F5%2F17%2Fphoto-1-15581032653512118286061.png
+http://projectstartercode2-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/a/a3/June_odd-eyed-cat.jpg
+```
+```
+http://localhost:8082/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/a/a3/June_odd-eyed-cat.jpg
 ```
 
+![localhost 200](./screenshots/localhost_test.png)
+![localhost 200](./screenshots/localhost_test.png)
+
 An example with 422 response (wrong extension):
+
 ```
-http://projectstartercode-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https%3A%2F%2Fgenk.mediacdn.vn%2F2019%2F5%2F17%2Fphoto-1-15581032653512118286061.pnga
+http://projectstartercode2-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/a/a3/June_odd-eyed-cat.jpga
 ```
 
 An example with 400 response (something wrong, maybe broken url):
+
 ```
-http://projectstartercode-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https%3A%2F%2Fgenk.mediacdn.vn%2F2019%2F5%2F17%2Fphoto-1-1558103265351211828606.png
+http://projectstartercode2-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/a/a3/June_odd-eyed-catafsafsa.jpg
 ```
 
 Another example with 400 response (empty url):
+
 ```
-http://projectstartercode-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=
+http://projectstartercode2-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=
 ```
 
 ***

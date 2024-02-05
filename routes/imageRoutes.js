@@ -24,6 +24,6 @@ router.get("/", async (req, res)=> {
             showLocalFile(res, outpath);
             deleteLocalFiles([outpath]);
         }).catch((reason) => {
-            res.status(400).send(`Something went wrong<br>${reason}`);
-        })
+        res.status(400).send(`Something went wrong<br>${reason}`);
+    })
 })
